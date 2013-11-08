@@ -8,6 +8,6 @@ When(/^I call: "(.*?)"$/) do |to_s|
   @result = @song.to_s
 end
 
-Then(/^I should get the following result:"(.*?)"$/) do |result|
-  result
+Then(/^I should get the following result: "(.*?)"$/) do |result|
+  @song.result.should == result
 end

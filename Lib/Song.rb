@@ -1,4 +1,6 @@
 class Song
+	attr_reader :result
+
     def initialize(name, artist, duration)
     	@name = name
 		@artist = artist
@@ -6,6 +8,6 @@ class Song
     end
 
     def to_s
-    	"Song: #{@name}--#{@artist} (#{@duration})"
+    	@result = "Song: #{@name}--#{@artist} (#{@duration})"
     end
 end
