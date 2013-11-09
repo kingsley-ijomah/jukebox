@@ -1,4 +1,4 @@
-Feature: Managing Karaoke
+Feature: Adding New Karaoke Song
 	In order to add a new karaoke song with lyrics
 	I should be able to create a new song through inherited method
 

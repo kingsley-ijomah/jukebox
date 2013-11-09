@@ -1,4 +1,4 @@
-Feature: Managing songs
+Feature: Adding New songs
 	In order to play songs on my jukebox
 	I should be able to add songs to play
 
