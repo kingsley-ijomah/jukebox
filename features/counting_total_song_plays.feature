@@ -13,7 +13,7 @@ Scenario: Number of times a song is played
 
 Scenario: Total sum of all songs played
 	Given that I have a song with name: "Beautiful Lady", artist: "Gyptian", duration: "3:25"
-	And I have another song with name: "She Doesn't Mind", artist: "Sean Paul", duration: "3:17"
+	When I have another song with name: "She Doesn't Mind", artist: "Sean Paul", duration: "3:17"
 	And I play play 'Beautiful Lady' by 'Gyptian' 4 times
 	And I also play 'She Doesn\'t Mind' by 'Sean Paul' 6 times
 	Then the total sum of all songs played should be 10 times
