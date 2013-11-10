@@ -32,22 +32,32 @@ end
 
 #============
 
-Given(/^that I have a song with name: "(.*?)", artist: "(.*?)", duration: "(.*?)"$/) do |arg1, arg2, arg3|
-  pending # express the regexp above with the code you wish you had
+Given(/^that I have a song with name: "(.*?)", artist: "(.*?)", duration: "(.*?)"$/) do |name, artist, duration|
+  @song = Hash.new
+  @song[artist] = Song.new(name, artist, duration)
 end
 
-When(/^I have another song with name: "(.*?)", artist: "(.*?)", duration: "(.*?)"$/) do |arg1, arg2, arg3|
-  pending # express the regexp above with the code you wish you had
+When(/^I add another song with name: "(.*?)", artist: "(.*?)", duration: "(.*?)"$/) do |name, artist, duration|
+  @song[artist] = Song.new(name, artist, duration)
 end
 
-When(/^I play play 'Beautiful Lady' by 'Gyptian' (\d+) times$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+When(/^I have not played any songs yet so total sum of all songs should be (\d+)$/) do |total|
+  Song.reset_total
+  expect(Song.total).to be(total.to_i)
 end
 
-When(/^I also play 'She Doesn\\'t Mind' by 'Sean Paul' (\d+) times$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+When(/^I play play 'Beautiful Lady' by '(.*?)' (\d+) times$/) do |artist, total|
+  for i in 0...total.to_i
+    @song[artist].play
+  end
 end
 
-Then(/^the total sum of all songs played should be (\d+) times$/) do |arg1|
-  pending # express the regexp above with the code you wish you had
+When(/^I also play 'She Doesn\\'t Mind' by '(.*?)' (\d+) times$/) do |artist, total|
+  for i in 0...total.to_i
+    @song[artist].play
+  end
+end
+
+Then(/^the total sum of all songs played should be (\d+) times$/) do |total|
+  expect(Song.total).to be(total.to_i)
 end
