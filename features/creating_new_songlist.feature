@@ -12,3 +12,10 @@ Scenario: Creating song list
 		| Killer Queen     | Queen           | 3:20     |
 		| The Logical Song | Scooter         | 2:00     |
 	When I check total playlist I expect 5 songs
+
+Scenario: Removing songs from end of play list
+	Given that I have already added 5 songs
+	And the last song is currently 'The Logical Song' by 'Scooter'
+	When I remove the last song in the play list
+	Then I expect total songs left to be 4 songs
+	And the last song to be 'Killer Queen' by 'Queen'
