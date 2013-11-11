@@ -6,7 +6,7 @@ Feature: Creating new song list
 Scenario: Creating song list
 	Given I added these songs to playlist by calling append method
 		| name             | artist          | duration |
-		| Tell Me How Come | Morgan Hwritage | 2:20     |
+		| Tell Me How Come | Morgan Heritage | 2:20     |
 		| Golden Brown     | The Stranglers  | 1:00     |
 		| The River Sings  | Enya            | 2:00     |
 		| Killer Queen     | Queen           | 3:20     |
@@ -19,3 +19,10 @@ Scenario: Removing songs from end of play list
 	When I remove the last song in the play list
 	Then I expect total songs left to be 4 songs
 	And the last song to be 'Killer Queen' by 'Queen'
+
+Scenario: Removing songs from the beging of play list
+	Given that I now have 4 songs left
+	And the first song is currently 'Tell Me How Come' by 'Morgan Heritage'
+	When I remove the first song from the list
+	Then I expect the first song to now be 'Golden Brown' by 'The Stranglers'
+	And I expect the total songs now left to be 3
