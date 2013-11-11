@@ -7,6 +7,25 @@ class PlayList
 
 	def append(aSong)
 		@songs.push(aSong)
-		self
+	end
+
+	def removeLast
+		@songs.pop
+	end
+
+	def removeFirst
+		@songs.shift
+	end
+
+	def getLastSong
+		@songs[-1]
+	end
+
+	def getFirstSong
+		@songs[0]
+	end
+
+	def totalSongs
+		@songs.length
 	end
 end
