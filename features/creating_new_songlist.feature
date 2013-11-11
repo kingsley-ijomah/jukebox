@@ -11,4 +11,4 @@ Scenario: Creating song list
 		| The River Sings  | Enya            | 2:00     |
 		| Killer Queen     | Queen           | 3:20     |
 		| The Logical Song | Scooter         | 2:00     |
-	When I check total playlist I expect 5
+	When I check total playlist I expect 5 songs
