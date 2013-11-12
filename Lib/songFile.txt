@@ -1,0 +1,15 @@
+/jazz/a001.mp3  | 3:45 | David Guetta         | Titanium    - feat.Sia
+/jazz/a002.mp3  | 3:45 | My Baby              | Flavour Nabania
+/jazz/a003.mp3  | 3:45 | Oliver Twist         | Dbanj
+/jazz/a004.mp3  | 3:45 | Papa Americano       | A Cool Beat Dj
+/jazz/a005.mp3  | 3:45 | Diamonds             | Rihanna
+/jazz/a006.mp3  | 3:45 | Man Down             | Rihanna
+/jazz/a007.mp3  | 3:45 | Thunder And Blazes   | sounds of the circus
+/jazz/a008.mp3  | 3:45 | Sexy And I know It   | LMFAO
+/jazz/a009.mp3  | 3:45 | Sunshine             | David Guetta
+/jazz/a0010.mp3 | 3:45 | Run                  | Loana lewis
+/jazz/a0011.mp3 | 3:45 | On The Floor         | Jennifer Lopez
+/jazz/a0012.mp3 | 3:45 | Canatata No. 208     | Sir Neville Marriner
+/jazz/a0013.mp3 | 3:45 | Elizabethan Serenade | Ronald Binge
+/jazz/a0014.mp3 | 3:45 | Killer Queen         | Queen
+/jazz/a0015.mp3 | 3:45 | Orinoco Flow         | Enya
