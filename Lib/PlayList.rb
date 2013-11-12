@@ -1,4 +1,6 @@
-class PlayList
+require 'song.rb'
+
+class PlayList < Song
 	attr_reader :songs
 
 	def initialize
@@ -27,6 +29,15 @@ class PlayList
 
 	def totalSongs
 		@songs.length
+	end
+
+	def importPlayList(path)
+		lines = File.open(path)
+		lines.each do | line |
+			file, duration, name, artist = line.chomp.split(/\s*\|\s*/)
+			@song = Song.new(name, artist, duration)
+			append(@song)
+		end
 	end
 
 	def [](key)
