@@ -28,4 +28,9 @@ class PlayList
 	def totalSongs
 		@songs.length
 	end
+
+	def [](key)
+		return @songs[key] if key.kind_of?(Integer)
+		return @songs.find { |aSong| aSong.name == key }
+	end
 end
