@@ -1,10 +1,11 @@
 require 'song.rb'
 
 class PlayList < Song
-	attr_reader :songs
+	attr_reader :songs, :search_results
 
 	def initialize
 		@songs = Array.new
+		@search_results = Array.new
 	end
 
 	def append(aSong)
@@ -29,6 +30,15 @@ class PlayList < Song
 
 	def totalSongs
 		@songs.length
+	end
+
+	def search_by_name(search)
+		search = search.downcase
+		@songs.each do | song |
+			if /#{search}/.match(song.name.downcase).to_s == search.to_s
+				@search_results.push(song)
+			end
+		end
 	end
 
 	def importPlayList(path)
